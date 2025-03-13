@@ -1,2 +1,8 @@
-CRIAR MODULO:
+CRIAR MODULOS:
 npx nest g module [moduleName]
+
+CRIAR CONTROLLERS:
+npx nest g controller [moduleName]
+
+CRIAR SERVICES:
+npx nest g service [moduleName]
