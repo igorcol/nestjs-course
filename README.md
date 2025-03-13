@@ -21,78 +21,60 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Nest.js Full Course - Improvement and Development
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This repository contains my studies and practical applications from the **Nest.js Full Course for Beginners**, a comprehensive 3-hour course covering the essential fundamentals of Nest.js. My goal with this project is to deepen my knowledge of Nest.js and its key functionalities, enhancing my skills with a widely used market tool.
 
-## Project setup
+## 💡 About the Course
+The course is structured into six main chapters, each covering fundamental aspects of Nest.js:
 
-```bash
-$ npm install
-```
+1. **Introduction** - Overview of Nest.js and its ecosystem.
+2. **Controllers** - Implementation and routing of requests.
+3. **Providers** - Dependency injection and services.
+4. **DTO Validation** - Data validation patterns and use of DTOs (Data Transfer Objects).
+5. **REST API** - Building RESTful endpoints following best practices.
+6. **Essential Additions** - Additional essential features for real-world projects.
 
-## Compile and run the project
+## 💪 My Development
+During this course, I aim to enhance my technical skills by focusing on:
 
-```bash
-# development
-$ npm run start
+- Modular and scalable architecture with **Nest.js**.
+- Utilizing **Controllers and Services** for responsibility separation.
+- Applying **data validation practices** with DTOs.
+- Building **efficient REST APIs**.
+- Exploring **widely used market tools**, improving my qualifications for real-world applications.
 
-# watch mode
-$ npm run start:dev
+## 🌍 Technologies Used
+- **Nest.js** - Node.js framework based on TypeScript.
+- **TypeScript** - Strongly typed JavaScript.
+- **Class-validator / class-transformer** - DTO validation and transformation.
+- **Postman / Insomnia** - API testing.
+- **Docker** (Future) - For containerization and scalable deployment.
 
-# production mode
-$ npm run start:prod
-```
+## 🔧 How to Run the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/nestjs-course.git
+   ```
+2. Install dependencies:
+   ```bash
+   cd nestjs-course
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run start
+   ```
+4. Access the API via Postman or browser at `http://localhost:3000`.
 
-## Run tests
+## 🏆 Progress and Conclusion
+This project documents my learning journey with Nest.js, allowing me to consolidate concepts and practices used in the market. By the end of the course, I plan to create a practical project applying all the learned concepts.
 
-```bash
-# unit tests
-$ npm run test
+---
 
-# e2e tests
-$ npm run test:e2e
+🌟 **Final Goal**: Become more proficient in modern backend development with Nest.js, creating scalable and secure solutions.
 
-# test coverage
-$ npm run test:cov
-```
+If you have any questions or suggestions, feel free to contribute or contact me!
 
-## Deployment
+📢 **Contact:** [Your GitHub/LinkedIn/Email]
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
