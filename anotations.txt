@@ -1,0 +1,2 @@
+CRIAR MODULO:
+npx nest g module [moduleName]
