@@ -56,9 +56,7 @@ This project documents my learning journey with Nest.js, allowing me to consolid
 
 ---
 
-🌟 **Final Goal**: Become more proficient in modern backend development with Nest.js, creating scalable and secure solutions.
+🏆 **Final Goal**: Become more proficient in modern backend development with Nest.js, creating scalable and secure solutions.
 
-If you have any questions or suggestions, feel free to contribute or contact me!
 
-📢 **Contact:** [Your GitHub/LinkedIn/Email]
 
