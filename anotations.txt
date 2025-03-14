@@ -6,3 +6,7 @@ npx nest g controller [moduleName]
 
 CRIAR SERVICES:
 npx nest g service [moduleName]
+
+
+CRIAR RESOURCE (Module + Controller + Service + Dtos + Entities):
+npx nest g resource [resourceName]
