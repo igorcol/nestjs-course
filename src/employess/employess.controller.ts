@@ -1,12 +1,14 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query, Ip } from '@nestjs/common';
 import { EmployessService } from './employess.service';
-import { Prisma } from '@prisma/client';
+import { Prisma, Role } from '@prisma/client';
 import { SkipThrottle, Throttle } from '@nestjs/throttler';
+import { MyLoggerService } from 'src/my-logger/my-logger.service';
 
 @SkipThrottle()
 @Controller('employess')
 export class EmployessController {
   constructor(private readonly employessService: EmployessService) { }
+  private readonly logger = new MyLoggerService(EmployessService.name);
 
   @Post()
   create(@Body() createEmployessDto: Prisma.EmployeeCreateInput) {
@@ -14,7 +16,8 @@ export class EmployessController {
   }
 
   @Get()
-  findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
+  findAll(@Ip() ip:string, @Query('role') role?: Role) {
+    this.logger.log(`Get Request fot all employees\t ${ip}`);
     return this.employessService.findAll(role);
   }
   
