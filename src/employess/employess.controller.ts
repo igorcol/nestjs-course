@@ -13,7 +13,7 @@ export class EmployessController {
   private logData(data: any, ip?: string, path?: string) {
     return this.logger.log(`${data}\t ${ip}`, path);
   }
-z
+
   @Post()
   create(@Ip() ip:string, @Body() createEmployessDto: Prisma.EmployeeCreateInput) {
     this.logData('Create Employee', ip, EmployessController.name);
