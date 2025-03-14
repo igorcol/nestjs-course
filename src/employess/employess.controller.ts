@@ -10,30 +10,38 @@ export class EmployessController {
   constructor(private readonly employessService: EmployessService) { }
   private readonly logger = new MyLoggerService(EmployessController.name);
 
+  private logData(data: any, ip?: string, path?: string) {
+    return this.logger.log(`${data}\t ${ip}`, path);
+  }
+z
   @Post()
-  create(@Body() createEmployessDto: Prisma.EmployeeCreateInput) {
+  create(@Ip() ip:string, @Body() createEmployessDto: Prisma.EmployeeCreateInput) {
+    this.logData('Create Employee', ip, EmployessController.name);
     return this.employessService.create(createEmployessDto);
   }
 
   @Get()
   findAll(@Ip() ip:string, @Query('role') role?: Role) {
-    this.logger.log(`Get Request for all employees\t ${ip}`, EmployessController.name);
+    this.logData('Get all employees', ip, EmployessController.name);
     return this.employessService.findAll(role);
   }
   
   @Throttle({ short: { ttl: 1000, limit: 1 } })
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Ip() ip:string, @Param('id') id: string) {
+    this.logData(`Get employee by id #${id}`, ip, EmployessController.name);
     return this.employessService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateEmployessDto: Prisma.EmployeeUpdateInput) {
+  update(@Ip() ip:string, @Param('id') id: string, @Body() updateEmployessDto: Prisma.EmployeeUpdateInput) {
+    this.logData(`Update employee id #${id}`, ip, EmployessController.name);
     return this.employessService.update(+id, updateEmployessDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Ip() ip:string, @Param('id') id: string) {
+    this.logData(`Delete employee id #${id}`, ip, EmployessController.name);
     return this.employessService.remove(+id);
   }
 }

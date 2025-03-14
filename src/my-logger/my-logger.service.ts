@@ -8,7 +8,6 @@ import * as path from 'path';
 export class MyLoggerService extends ConsoleLogger {
 
     async logToFile(entry: any) {
-        console.log('🟢🟢 LOG TO FILE')
         const formattedEntry = `${Intl.DateTimeFormat('pt-BR', {
             dateStyle: 'short',
             timeStyle: 'short',
@@ -17,10 +16,8 @@ export class MyLoggerService extends ConsoleLogger {
 
         try {
             if (!fs.existsSync(path.join(__dirname, '..', '..', 'logs'))) {
-                console.log('🟢🟢 CRIANDO PASTA DE LOGS')
                 await fsPromises.mkdir(path.join(__dirname, '..', '..', 'logs'));
             }
-            console.log('🟢🟢 CRIANDO ARQUIVO DE LOGS')
             await fsPromises.appendFile(path.join(__dirname, '..', '..', 'logs', 'myLogFile.log'), formattedEntry);
         }
         catch (e) {
@@ -29,7 +26,7 @@ export class MyLoggerService extends ConsoleLogger {
     }
 
     log(message: string, context?: string) {
-        const entry = `${context}\t${message}`;
+        const entry = `[${context}]\t ${message}`;
         this.logToFile(entry);
         super.log(message, context);
     }
